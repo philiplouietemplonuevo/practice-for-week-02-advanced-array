@@ -17,7 +17,10 @@ console.log(longestWord('')); // ''
 */
 
 let longestWord = function(sentence) {
-    // Your code here
+    return sentence.split(" ").reduce((acc, el) => {
+        el.length > acc.length ? acc = el : acc = acc;
+        return acc;
+    });
 };
 
 // Your code here
@@ -28,4 +31,4 @@ try {
     module.exports = longestWord;
 } catch (e) {
     module.exports = null;
-}
+}
